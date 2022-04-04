@@ -1,0 +1,45 @@
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+
+      border-radius: 0.5rem;
+    }
+    100% {
+      transform: scale(1.05);
+      border-radius: 0.45rem;
+    }
+  }
+
+  @keyframes wiggle {
+    0% {
+      transform: rotate(-1deg);
+    }
+    20% {
+      transform: rotate(0.75deg);
+    }
+    40% {
+      transform: rotate(-1deg);
+    }
+    60% {
+      transform: rotate(0.75deg);
+    }
+    90% {
+      transform: rotate(-1deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
+
+  $animationSpeed: 40s;
+
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-200px * 6))}
+  }
+
+  @keyframes change-background {
+    to {
+     background: right bottom no-repeat url(/img/okladki-dwie.png);
+    }
+ }

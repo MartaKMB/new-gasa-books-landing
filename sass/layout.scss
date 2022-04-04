@@ -1,0 +1,278 @@
+.gasabookpage-header {
+    width: 100%;
+
+    &__top-fixed-line {
+        box-sizing: border-box;
+        width: 100%;
+        height: $header-height;
+        background-color: $almoust-white-primary-background;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+    }
+
+    .top-fixed-line {
+        &__contact {
+            max-width: 30vw;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+}
+
+@media (min-width: 800px) {
+    .gasa-shop-button {
+        font-size: 1.2rem;
+    }
+}
+
+.gasabookpage-container {
+    box-sizing: border-box;
+    padding: 4.5rem 0;
+    min-height: calc(100vh - 4rem - 4rem);
+
+    .block-wrapper {
+        width: 100%;
+        padding: 1rem 0;
+        
+        &--yellow-background-color {
+            background-color: $yellow-primary;
+        }
+
+        &--green-background-color {
+            background-color: $green-primary;
+        }
+
+        &__block-header {
+            width: 100%;
+            max-width: 900px;
+            text-align: center;
+            padding-top: 1rem;
+            margin: 0 auto;
+        }
+
+        &__limited-width-inside-block {
+            max-width: 900px;
+            box-sizing: border-box;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+    }
+}
+
+.first-block-with-short-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &__description-txt {
+        padding: 1rem;
+    }
+}
+
+@media (min-width: 800px) {
+    .first-block-with-short-description {
+        flex-direction: row;
+    
+        &__description-txt {
+            padding: 0 0 0 2rem;
+        }
+    }
+}
+
+.first-block-with-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: calc(100vh - 4rem);
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.block-with-slider {
+	&__title-txt {
+		max-width: 900px;
+		width: 100%;
+		margin: 2rem auto;
+		text-align: center;
+	}
+}
+
+.slider-container {
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: 100%;
+    max-width: 900px;
+    padding: 2rem 0;
+	
+	// &::before,
+	// &::after {
+    //     padding: 2rem 0;
+    //     @include white-gradient;
+	// 	content: "";
+	// 	height: 8rem;
+	// 	position: absolute;
+	// 	width: 10rem;
+	// 	z-index: 2;
+	// }
+	
+	// &::after {
+	// 	right: 0;
+	// 	top: 0;
+	// 	transform: rotateZ(180deg);
+	// }
+
+	// &::before {
+	// 	left: 0;
+	// 	top: 0;
+	// }
+	
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite;
+		display: flex;
+		width: calc(20rem * 12);
+		
+		&__slide {
+			height: 10rem;
+			width: 12rem;
+			border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.75rem;
+            font-weight: 300;
+
+			img {
+				width: 8rem;
+				height: 8rem;
+				border-radius: 50%;
+			}
+		}
+	}
+}
+
+.block-photo-with-description {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+
+    &__photo-part {
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+        
+    }
+
+    &__description-txt {
+        width: 100%;
+        // padding: 1rem 0 0;
+    }
+
+    div:nth-last-child(odd) {
+        padding: 1rem 0 0;
+    }
+}
+
+@media (min-width: 800px) {
+    .block-photo-with-description {
+        flex-direction: row;
+        align-items: center;
+
+        div:nth-last-child(odd) {
+            padding: 0 1rem 0 2rem;
+        }
+    }
+
+    .photo-part {
+        width: 45%;
+        min-width: 500px;
+
+        &--smaller {
+            width: 30%;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .description-txt {
+        width: 45%;
+
+        &--wider {
+            width: 60%;
+        }
+    }
+}
+
+.block-book-inside-with-description {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+
+    &__book-main-part {
+        max-height: calc(100vh - 6rem);
+        height: 75vh;
+        width: 100%;
+        max-width: 300px;
+        background: left bottom no-repeat url(/img/okladki-dwie.png);
+        animation: change-background 4s infinite alternate;
+    }
+
+    &__part-of-description {
+        width: 100%;
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;     
+    }
+
+    .part-of-description {
+        &--left {
+            text-align: left;
+            padding-right: 1rem;
+        }
+
+        &--right {
+            text-align: right;
+            padding-left: 1rem;
+        }
+
+        &__single-description {
+            padding-top: 2rem;
+        }
+    }
+}
+
+@media (min-width: 800px) {
+    .block-book-inside-with-description {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .part-of-description {
+        font-size: 0.75rem;
+    }
+}
+
+.gasabookpage-footer {
+    height: $footer-height;
+}

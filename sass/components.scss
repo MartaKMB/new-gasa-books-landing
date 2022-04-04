@@ -1,0 +1,220 @@
+@mixin white-gradient {
+	background: linear-gradient(to right,  rgba(246,246,246,1) 0%,rgba(246,236,246,0) 100%);
+}
+
+@mixin button-base($backgroundcolor, $bordercolor, $fontcolor) {
+    text-align: center;
+    padding: 0.2rem 0.4rem;
+    color: $fontcolor;
+    background-color: $backgroundcolor;
+    // font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    border: 2px solid $bordercolor;
+    border-radius: 0.5rem;
+    transition: 0.5s ease-in-out;
+
+    &:hover {
+        background-color: transparent;
+    }
+}
+
+.st6.ear-r, .st5.ear-l, .st4.ear-l {
+    animation: 3s wiggle ease infinite;
+}
+
+.st7.whiskers {
+    animation: 1s wiggle ease infinite;
+}
+
+.gasa-shop-button {
+    max-width: 60vw;
+    @include button-base($yellow-primary, $yellow-primary, $almoust-white-primary-background);
+}
+
+.buy-button-with-face {
+    width: 100%;
+    max-width: 35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:start;
+
+    .cat-face-svg, .dog-face-svg {
+        width: 100%;
+        max-width: 10rem;
+        min-height: 10rem;
+    }
+
+    .dog-face-svg {
+        margin-top: 2rem;
+    }
+
+    &__book-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 1rem 0.5rem;
+        text-align: center;
+    }
+
+    &__link-button {
+        width: 100%;
+        max-width: 12rem;
+        margin: 1rem 2rem 1rem;
+        animation: 1s pulse ease 10s 5;
+        @include button-base($almoust-black-primary-font, $almoust-black-primary-font, $almoust-white-primary-background);
+    }
+
+    .link-button:active,
+    .linl-button:visited {
+        color: $almoust-white-primary-background;
+    }
+}
+
+@media (min-width: 800px) {
+    .link-button {
+        max-width: 75%;
+    }
+
+    .buy-button-with-face {
+        width: 50%;
+        max-width: 100%;
+    }
+
+    .buy-button-with-face--cat {
+        height: calc(100vh - 4rem);
+        max-height: 30rem;
+        background: url(/img/cat-massage-position_svg.svg) bottom left no-repeat;
+        background-size:180%;
+        border-right: 0.25rem solid $almoust-white-primary-background;
+        transition: 1s ease-in-out;
+        background-color: $yellow-primary;
+
+        &:hover {
+            width: 100%;
+            background-size:90%;
+            // background-color: $yellow-primary;
+            margin-right: -50%;
+            z-index: 2;
+        }
+    }
+
+    // ???
+
+    .buy-button-with-face--dog {
+        height: calc(100vh - 4rem);
+        max-height: 30rem;
+        background: url(/img/dog-massage-position_svg.svg) bottom right no-repeat;
+        background-size: 200%;
+        border-left: 0.25rem solid $almoust-white-primary-background;
+        transition: 1s ease-in-out;
+        background-color: $yellow-primary;
+
+        &:hover {
+            margin-left: -50%;
+            width: 100%;
+            background-size: 100%;
+            z-index: 2;
+        }
+    }
+
+    .cat-face-svg, .dog-face-svg {
+        display: none;
+    }
+}
+
+.hand-only-point-simple-svg {
+    max-width: 60px;
+    width: 30vw;
+}
+
+@media (min-width: 800px) {
+    .hand-only-point-simple-svg {
+        transform: rotate(0.75turn);
+    }
+}
+
+.bold-txt {
+    font-weight: bold;
+}
+
+.white-txt {
+    color: $almoust-white-primary-background;
+}
+
+.cookies-message { 
+    z-index: 10000; 
+    display: none;
+    position: fixed;
+    padding: 8px 21px;
+    border-radius: 5px;
+    text-align: center;
+    bottom: 50px;
+    right: 30px;
+    margin-left: 5%;
+    color: #000000;
+    // background-color: $tertiary-color-grey-rgba-2;
+    font-family: $font-primary;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 2;
+
+    &__more-cookies-link {
+        border-bottom: 1px dotted;
+    }
+    
+    &__accept-cookies-button { 
+        transition: all 0.5s; 
+        padding: 2px 6px; 
+        display: inline-block; 
+        cursor: pointer;
+        background: $almoust-black-primary-font;
+        border: 1px solid $almoust-black-primary-font;
+        border-radius: 5px;
+        // color: $tertiary-color-grey;
+        line-height: 1.5;
+        text-align: center;
+        width: 100px;
+        margin-left: 20px;
+        font-family: $font-primary;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    
+    &__accept-cookies-button:hover{ 
+        background-color: transparent; 
+    }
+  }
+
+  .circle {
+    position: relative;
+    z-index: 2;
+    background-color: $almoust-white-primary-background;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 1.25rem;
+        height: 1rem;
+        position: absolute;
+        bottom: calc(50% - 0.5rem);      
+    }
+
+    &--left {
+        &::after {
+            background: left center / 1.25rem 1rem no-repeat url(/img/komponent-lapka.png); 
+            // left: -0.75rem;
+            left: -1.75rem;
+            // transform: rotate(-30deg);
+        }
+    }
+
+    &--right {
+        &::after {
+            background: right center / 1.25rem 1rem no-repeat url(/img/komponent-lapka.png); 
+            // right: -0.75rem;
+            right: -1.75rem;
+        }
+    }
+}
