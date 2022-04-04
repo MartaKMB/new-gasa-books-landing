@@ -85,7 +85,7 @@
     .buy-button-with-face--cat {
         height: calc(100vh - 4rem);
         max-height: 30rem;
-        background: url(/img/cat-massage-position_svg.svg) bottom left no-repeat;
+        background: url(../img/cat-massage-position_svg.svg) bottom left no-repeat;
         background-size:180%;
         border-right: 0.25rem solid $almoust-white-primary-background;
         transition: 1s ease-in-out;
@@ -105,7 +105,7 @@
     .buy-button-with-face--dog {
         height: calc(100vh - 4rem);
         max-height: 30rem;
-        background: url(/img/dog-massage-position_svg.svg) bottom right no-repeat;
+        background: url(../img/dog-massage-position_svg.svg) bottom right no-repeat;
         background-size: 200%;
         border-left: 0.25rem solid $almoust-white-primary-background;
         transition: 1s ease-in-out;
@@ -154,11 +154,15 @@
     right: 30px;
     margin-left: 5%;
     color: #000000;
-    // background-color: $tertiary-color-grey-rgba-2;
+    background-color: $pink-primary-rgba;
     font-family: $font-primary;
     font-size: 11px;
     font-weight: 600;
     line-height: 2;
+
+    // span {
+    //     margin-bottom: 2rem;
+    // }
 
     &__more-cookies-link {
         border-bottom: 1px dotted;
@@ -172,7 +176,7 @@
         background: $almoust-black-primary-font;
         border: 1px solid $almoust-black-primary-font;
         border-radius: 5px;
-        // color: $tertiary-color-grey;
+        color: $almoust-white-primary-background;
         line-height: 1.5;
         text-align: center;
         width: 100px;
@@ -180,6 +184,7 @@
         font-family: $font-primary;
         font-size: 12px;
         font-weight: 600;
+        margin-top: 0.6rem;
     }
     
     &__accept-cookies-button:hover{ 
