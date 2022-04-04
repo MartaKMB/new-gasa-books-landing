@@ -314,11 +314,11 @@
 
         <div class="gasabookpage-container__block-wrapper block-wrapper block-wrapper--yellow-background-color">
             <div class="block-wrapper__limited-width-inside-block block-with-button">
-                <!-- <div class="block-with-button__paws-prints paws-prints">
-                    <img class="paws-prints__prints" src="img/dog-print-paws.png" alt="Bear Prints">
-                    <span class="paws-prints__cover"></span>
-                  </div> -->
-                <a class="gasa-shop-button" href="https://martamucha.pl/sklep" target="_blank">PRZEJDŹ DO SKLEPU</a>   
+                <div class="block-with-button__paws-prints paws-prints">
+                    <img class="paws-prints__prints" src="img/dog-print-paws-white.png" alt="Bear Prints">
+                    <span class="paws-prints__paws-cover paws-cover--yellow"></span>
+                  </div>
+                <a class="gasa-shop-button gasa-shop-button--white-border" href="https://martamucha.pl/sklep" target="_blank">PRZEJDŹ DO SKLEPU</a>   
             </div>
         </div>
 
@@ -471,7 +471,7 @@
             <div class="block-wrapper__limited-width-inside-block block-with-button">
                 <div class="block-with-button__paws-prints paws-prints">
                     <img class="paws-prints__prints" src="img/dog-print-paws.png" alt="Bear Prints">
-                    <span class="paws-prints__cover"></span>
+                    <span class="paws-prints__paws-cover paws-cover"></span>
                   </div>
                 <a class="gasa-shop-button" href="https://martamucha.pl/sklep" target="_blank">PRZEJDŹ DO SKLEPU</a>   
             </div>
@@ -497,13 +497,12 @@
 
         <div class="gasabookpage-container__block-wrapper block-wrapper block-wrapper--green-background-color">
             <h2 class="block-wrapper__block-header white-txt">FAQ</h2>
-            <div class="block-wrapper__limited-width-inside-block block-with-blurbs">
-                <div class="col">
-                    <div class="tabs">
-                      <div class="tab">
+            <div class="block-wrapper__limited-width-inside-block block-with-faq">
+                    <div class="block-with-faq__faq-tabs faq-tabs">
+                      <div class="faq-tabs__tab tab">
                         <input type="radio" id="rd1" name="rd">
-                        <label class="tab-label" for="rd1">Czym różni się wydanie I książki o GaSa dla psów od wydania II?</label>
-                        <div class="tab-content">
+                        <label class="tab__label" for="rd1">Czym różni się wydanie I książki o GaSa dla psów od wydania II?</label>
+                        <div class="tab__content">
                           Drugie wydanie zawiera uzupełnienia, ale struktura pozostaje ta sama.
                           Oprócz informacji o tym, czym jest masaż GaSa, znajdziesz również kilka słów o tym, czym nie jest.
                           Rozwinęłam temat wykorzystania masażu GaSa dla opiekunów, przewodników psów pracujących i osób zawodowo zajmujących się wspieraniem ludzi i ich zwierząt.
@@ -514,10 +513,10 @@
                           i (jak zawsze) tym, co podpowiadali mi opiekunowie, a przede wszystkim ich podopieczni.
                         </div>
                       </div>
-                      <div class="tab">
+                      <div class="faq-tabs__tab tab">
                         <input type="radio" id="rd2" name="rd">
-                        <label class="tab-label" for="rd2">Mam już wydanie z 2015 roku - czy warto kupować nowe publikacje?</label>
-                        <div class="tab-content">
+                        <label class="tab__label" for="rd2">Mam już wydanie z 2015 roku - czy warto kupować nowe publikacje?</label>
+                        <div class="tab__content">
                           Jeżeli masz kota, to warto uzupełnić biblioteczkę o publikację dedykowaną tym zwierzętom.
                           <br>
                           Jeżeli masz psa i GaSa jest już Waszym rytuałem relaksu, ale chcesz poznać nowe techniki wystarczającym może
@@ -525,10 +524,10 @@
                           To podręczna ściągawka, która jest pomocą w trakcie masażu.
                         </div>
                       </div>
-                      <div class="tab">
+                      <div class="faq-tabs__tab tab">
                         <input type="radio" id="rd3" name="rd">
-                        <label class="tab-label" for="rd3">Mam kota i psa - czy kupować obie publikacje?</label>
-                        <div class="tab-content">
+                        <label class="tab__label" for="rd3">Mam kota i psa - czy kupować obie publikacje?</label>
+                        <div class="tab__content">
                           GaSa nie ma ograniczeń gatunkowych. Mając publikację o masażu dla psów możesz zawarte tam wskazówki dostosować do potrzeb Twojego kota.
                           Jeżeli decydujesz się na jedną książkę polecam tę przeznaczoną dla psów - zawiera wszystkie techniki ujęte w książce dedykowanej kotom plus dodatkowe, które są bardziej preferowane przez psy
                           (to spore uogólnienie, z książki dowiesz się, że każdy psiak/kot jest inny, a masaż GaSa dostosowujemy do indywidualnych potrzeb).
@@ -536,10 +535,10 @@
                           Z drugiej strony książki pięknie się uzupełniają i wizualizacje poszczególnych technik dobrze jest zobaczyć na konkretnym gatunku.
                         </div>
                       </div>
-                      <div class="tab">
+                      <div class="faq-tabs__tab tab">
                         <input type="radio" id="rd4" name="rd">
-                        <label class="tab-label" for="rd4">Mój podopieczny nie lubi dotyku - czy książka o GaSa pomoże to zmienić?</label>
-                        <div class="tab-content">
+                        <label class="tab__label" for="rd4">Mój podopieczny nie lubi dotyku - czy książka o GaSa pomoże to zmienić?</label>
+                        <div class="tab__content">
                             Masaż GaSa rozpoczynamy od punktu, który jest komfortowy dla naszego czworonoga.
                             Jeżeli nie lubi być dotykany - zaczynamy od... "nie dotykania".
                             W książce znajdziesz podpowiedzi, jak stopniowo proponować i ew. wprowadzać dotyk do rytuałów relaksu.
@@ -549,32 +548,33 @@
                             W tym PDFie znajdziesz wskazówki, na co zwrócić uwagę podczas budowania rytuału relaksu niekoniecznie związanego z dotykiem.
                         </div>
                       </div>
-                      <div class="tab">
+                      <div class="faq-tabs__tab tab">
                         <input type="radio" id="rd5" name="rd">
-                        <label class="tab-label" for="rd5">Gdzie można kupić książki o GaSa?</label>
-                        <div class="tab-content">
+                        <label class="tab__label" for="rd5">Gdzie można kupić książki o GaSa?</label>
+                        <div class="tab__content">
                           W najlepszych księgarniach internetowych. ;)
                           Zapraszam do mojego sklepiku oraz do Samowydawców.
                           Poza tym, z czasem, publikacje zaczną się pojawiać w innych miejscach.
                         </div>
                       </div>
-                      <div class="tab">
+                      <div class="faq-tabs__tab tab">
                         <input type="radio" id="rd6" name="rd">
-                        <label class="tab-label" for="rd6">Czy można kupić książkę z dedykacją?</label>
-                        <div class="tab-content">
-                          Zawsze z przyjemnością zostawiam swój podpis i rysunki w moich książkach.
+                        <label class="tab__label" for="rd6">Czy można kupić książkę z dedykacją?</label>
+                        <div class="tab__content">
+                          Można wybrać taką opcję kupując w sklepiku Muchy w trakcie trwania akcji przedsprzedażowej.
+                          <br>  
+                          Zawsze z przyjemnością zostawiam swój podpis (i rysunki) w moich książkach.
                           Dobrą okazją, żeby zdobyć dedykację są warsztaty.
                           Jeżeli już uczestniczył_ś w warsztatach zerknij, czy nie wybieram się do Twojego miasta
                           - może uda się spotkać? :)
                         </div>
                       </div>
                     </div>
-                  </div>
             </div>
         </div>
 
         <div class="gasabookpage-container__block-wrapper block-wrapper block-wrapper--basic-background-color">
-            <h2 class="block-wrapper__block-header">Co inni mówią o moim podejściu i GaSa?</h2>
+            <h2 class="block-wrapper__block-header">Co mówią o moim podejściu i GaSa?</h2>
             <div class="block-wrapper__limited-width-inside-block opinion-gallery">
                 <div class="opinion-gallery__more-images-column">
                     <img class="opinion-gallery__main-image opinion-img" src="img/opinion-gasa-fb/opinia-krakow-2016.png" alt="screen opinie: pomagasz nam zbudować prawdziwą więź" />
@@ -645,7 +645,7 @@
                 <span>Ta strona internetowa używa plików cookies. Korzysta z narzędzi analitycznych Google Analytics.
                     Zawiera osadzone nagrania wideo z serwisu YouTube.</span>
                 <br>
-                    <a href="https://martamucha.pl/polityka-prywatnosci/" class="cookies-message__more-cookies-link">Więcej informacji</a>
+                    <a href="https://martamucha.pl/polityka-prywatnosci/" class="cookies-message__more-cookies-link" target="_blank">Więcej informacji</a>
                 <a onclick="closeCookieBanner();" id="accept-cookies-button" class="cookies-message__accept-cookies-button">OK</a>
             </div>
         </div>

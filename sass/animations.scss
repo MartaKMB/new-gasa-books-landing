@@ -43,3 +43,9 @@
      background: right bottom no-repeat url(../img/okladki-dwie.png);
     }
  }
+
+ @keyframes walk {
+  to {
+    transform: translateX(888px);
+  }
+}

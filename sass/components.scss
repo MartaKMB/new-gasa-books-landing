@@ -100,8 +100,6 @@
         }
     }
 
-    // ???
-
     .buy-button-with-face--dog {
         height: calc(100vh - 4rem);
         max-height: 30rem;
@@ -135,12 +133,61 @@
     }
 }
 
-.bold-txt {
-    font-weight: bold;
-}
-
-.white-txt {
-    color: $almoust-white-primary-background;
+.block-with-faq {
+    input {
+      position: absolute;
+      opacity: 0;
+      z-index: -1;
+  
+      &:checked {
+        + .tab__label {
+          &::after {
+            transform: rotate(-35deg);
+          }
+        }
+        ~ .tab__content {
+          max-height: 100vh;
+          padding: 1em;
+        }
+      }
+    }
+  
+    &__faq-tabs {
+      border-radius: 5px;
+      overflow: hidden;
+    }
+  
+    .tab {
+      width: 100%;
+      color: $almoust-white-primary-background;
+      overflow: hidden;
+      
+      &__label {
+        display: flex;
+        justify-content: space-between;
+        padding: 1em;
+        background: $green-primary;
+        font-weight: bold;
+        cursor: pointer;
+  
+        &::after {
+          content: "";
+          background: left center / 3.5rem 1rem no-repeat url(../img/komponent-palec.png); 
+          width: 3.5rem;
+          height: 1rem;
+          text-align: center;
+          transition: all .35s;
+        }
+      }
+  
+      &__content {
+        max-height: 0;
+        padding: 0 1em;
+        color: $almoust-black-primary-font;
+        background: $pink-primary;
+        transition: all .35s;
+      }
+    }
 }
 
 .cookies-message { 
@@ -159,10 +206,6 @@
     font-size: 11px;
     font-weight: 600;
     line-height: 2;
-
-    // span {
-    //     margin-bottom: 2rem;
-    // }
 
     &__more-cookies-link {
         border-bottom: 1px dotted;
@@ -208,17 +251,14 @@
 
     &--left {
         &::after {
-            background: left center / 1.25rem 1rem no-repeat url(/img/komponent-lapka.png); 
-            // left: -0.75rem;
+            background: left center / 1.25rem 1rem no-repeat url(../img/komponent-lapka.png); 
             left: -1.75rem;
-            // transform: rotate(-30deg);
         }
     }
 
     &--right {
         &::after {
-            background: right center / 1.25rem 1rem no-repeat url(/img/komponent-lapka.png); 
-            // right: -0.75rem;
+            background: right center / 1.25rem 1rem no-repeat url(../img/komponent-lapka.png); 
             right: -1.75rem;
         }
     }

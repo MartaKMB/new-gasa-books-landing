@@ -177,7 +177,6 @@
 
     &__description-txt {
         width: 100%;
-        // padding: 1rem 0 0;
     }
 
     div:nth-last-child(odd) {
@@ -273,6 +272,335 @@
     }
 }
 
-.gasabookpage-footer {
-    height: $footer-height;
+.block-with-blurbs {
+    .about-book {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-direction: column;
+        position: relative;
+
+        &::before {
+          content: "";
+          display: block;
+          background-size: contain;
+          background-position: bottom left;
+          background-repeat: no-repeat;
+          width: 100%;
+          position: absolute;
+          left: 0;
+        }
+
+        &--cat-blurbs {
+            margin-top: 3.5rem;
+
+            &::before {
+                background-image: url(../img/half-cat-head.png);
+                height: 5rem;
+                top: -3.8rem;
+            }
+        }
+
+        &--dog-blurbs {
+            margin-top: 5rem;
+
+            &::before {
+                background-image: url(../img/half-dog-head.png);
+                height: 8.75rem;
+                top: -3.65rem;
+            }
+        }
+    }
+
+    .single-opinion-with-photo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $almoust-white-primary-background;
+        padding: 1.25rem;
+        margin: 0.5rem;
+        width: 100%;
+
+        .rounded-img {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-top: 1rem;
+            margin-top: auto;
+            
+
+            img {
+                height: 6rem;
+                height: 6rem;
+                border-radius: 50%;
+            }
+
+            &__author-description {
+                padding-left: 1rem;
+                font-size: 0.65rem;
+            }
+        }
+    }
 }
+
+@media (min-width: 800px) {
+    .block-with-blurbs {
+      .about-book {
+          flex-direction: row;
+      }
+  
+      .single-opinion-with-photo {
+          width: 48.5%;
+          font-size: 0.75rem;
+      }
+    }
+}
+
+.block-with-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    &__paws-prints {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    
+        img {
+            height: 100px;
+        }
+    }
+
+    .paws-prints {
+        &__paws-cover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: $almoust-white-primary-background;
+            height: 100px;
+            width: 888px;
+            animation: walk 10s steps(10, end) infinite;
+          }
+
+          .paws-cover {
+            &--yellow {
+              background-color: $yellow-primary;
+            }
+          }
+    }
+
+    .gasa-shop-button {
+        margin: 2rem auto 0.5rem;
+        font-size: 1.25rem;
+        padding: 1rem 2rem;
+        max-width: fit-content;
+
+        &--white-border {
+          border-color: $almoust-white-primary-background;
+
+          &:hover {
+            border-color: $almoust-black-primary-font;
+          }
+        }      
+    }
+}
+
+.block-video-with-description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+  
+    &__video-part {
+      iframe {
+        width: 560px;
+        height: 315px;
+        max-width: 70vw;
+      }
+    }
+  }
+  
+@media (min-width: 800px) {
+    .block-video-with-description {
+      flex-wrap: nowrap;
+      column-gap: 1.5rem;
+    }
+}
+
+.opinion-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 0 1.5rem;
+
+    .opinion-img {
+        max-width: 80vw;
+        display: block;
+        margin-bottom: 0.2rem;
+    }
+
+    &__more-images-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.last-block-with-buttons {
+    display: flex;
+    column-gap: 2rem;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 2.5rem;
+  
+    &__last-buy-button {
+      width: 100%;
+      max-width: 12rem;
+      margin: 1rem 2rem 1rem;
+      @include button-base($almoust-black-primary-font, $almoust-black-primary-font, $almoust-white-primary-background);
+      margin-top: 70px;
+    }
+  
+    .last-buy-button {
+      position: relative;
+  
+      .link-button {
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: -75px;
+          width: 100%;
+          height: 70px;
+          transition: 1s ease-in-out;
+        }
+      }
+  
+      &--dog {
+        .link-button {
+          &::after {
+            right: -2rem;
+            background: url(../img/komponent-glaskanie-z-prawej.png) center right no-repeat;
+            background-size: contain;
+          }
+        }
+      }
+  
+      &--cat {
+        .link-button {
+          &::after {
+            left: -2rem;
+            background: url(../img/komponent-glaskanie-z-lewej.png) center left no-repeat;
+            background-size: contain;
+          }
+        }
+      }
+    }
+  
+    &__link-simple {
+      width: 100%;
+      max-width: 900px;
+      margin: 2rem auto 1rem;
+      text-align: center;
+    }
+  }
+
+  @media (min-width: 800px) {
+    .last-block-with-buttons {
+      flex-wrap: nowrap;
+    }
+  
+    .last-buy-button {
+      &--cat {
+        &:hover {
+          .link-button {
+            &::after {
+              left: 0;
+            }
+          }
+        }
+      }
+  
+      &--dog {
+        &:hover {
+          .link-button {
+            &::after {
+              right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .gallery-block {
+    display: flex;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;  
+  
+    .single-img-wrap {
+      width: 250px;
+      height: 250px;
+  
+      &__img-tag {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  
+
+.gasabookpage-footer {
+    width: 100%;
+    height: 3rem;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    box-sizing: border-box;
+    background-color: $almoust-white-primary-background;
+  
+    &__top-line,
+    &__middle-line {
+        width: 95%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+  
+    &__middle-line {
+        margin-bottom: 6rem;
+    }
+  
+    &__bottom-line {
+        width: fit-content;
+        background-color: $pink-primary-rgba;
+        height: 1.5rem;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        column-gap: 2rem;
+        z-index: 5;
+        padding: 1rem 0 1rem 1rem;
+  
+        img {
+          height: 1.5rem;
+        }
+        
+        i {
+          font-size: 1rem;
+        }
+    }
+  }
